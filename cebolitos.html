@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cebolitos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 30% 30%, #1a001f 10%, #0d0d0d 90%);
+      background-image: url('https://i.imgur.com/mzJaxax.png'); /* opcional: fundo com linhas curvas se quiser simular */
+      background-size: cover;
+      color: #fff;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      width: 70px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 900;
+      color: #c43aff;
+      text-shadow: 0 0 15px #c43aff, 0 0 30px #932fff;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid #701ca7;
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 30px #8c2bff66;
+    }
+
+    .input-box {
+      background-color: #1a1a1a;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: inset 0 0 10px #5e1a88;
+      font-weight: bold;
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      width: 100%;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper .eye-icon {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    .btn {
+      width: 100%;
+      background: linear-gradient(90deg, #c43aff, #932fff);
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      text-shadow: 0 0 10px #000;
+      box-shadow: 0 0 15px #c43aff;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+      transform: scale(1.02);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-family: 'Pacifico', cursive;
+      font-size: 16px;
+      color: #d4a6f7;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer svg {
+      width: 20px;
+      height: 20px;
+      fill: #c43aff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://i.imgur.com/IKIFKQV.png" alt="MoonScripts logo" />
+  </div>
+
+  <h1>CEBOLITOS</h1>
+
+  <div class="container">
+    <input type="text" class="input-box" placeholder="Ex: 00011198235xSP" />
+
+    <div class="password-wrapper">
+      <input type="password" id="senha" class="input-box" placeholder="Digite Sua Senha" />
+      <span class="eye-icon" onclick="toggleSenha()">👁️</span>
+    </div>
+
+    <button class="btn">REALIZAR ATIVIDADES</button>
+    <button class="btn">CORRIGIR ATIVIDADES</button>
+    <button class="btn">CORRIGIR PROVA PAULISTA</button>
+  </div>
+
+  <div class="footer">
+   <path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8..." /></svg>
+    Design feito por zilentvoid
+  </div>
+
+  <script>
+    function toggleSenha() {
+      const input = document.getElementById("senha");
+      input.type = input.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
